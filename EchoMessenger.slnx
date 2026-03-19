@@ -1,3 +1,6 @@
 <Solution>
+  <Folder Name="/image/">
+    <File Path="C:/Users/user/Desktop/visualstudio/echo2.png" />
+  </Folder>
   <Project Path="EchoMessenger.csproj" />
 </Solution>
