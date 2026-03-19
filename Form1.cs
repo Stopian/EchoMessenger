@@ -22,7 +22,16 @@ namespace Echo_Messenger
             lstTextInput.Items.Add(UserInput); // lstTextInput 에 UserInput 텍스트를 입력
             txtUserInput.Text = ""; // txtUserInput 에 입력한 텍스트를 지워줌
 
+            txtUserInput.Focus(); // txtUserInput 에 입력한 텍스트를 지운 후에도 txtUserInput 에 커서가 위치하도록 해줌
+
         }
 
+        private void txtUserInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btrupload_Click(sender, e);
+            }
+        }
     }
 }

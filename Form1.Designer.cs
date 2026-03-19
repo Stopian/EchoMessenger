@@ -41,6 +41,7 @@
             txtUserInput.Name = "txtUserInput";
             txtUserInput.Size = new Size(600, 43);
             txtUserInput.TabIndex = 0;
+            txtUserInput.KeyDown += txtUserInput_KeyDown;
             // 
             // btrUpload
             // 
