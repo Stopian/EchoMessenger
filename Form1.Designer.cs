@@ -32,6 +32,7 @@
             btrUpload = new Button();
             lstTextInput = new ListBox();
             lblProgramName = new Label();
+            lblTextCount = new Label();
             SuspendLayout();
             // 
             // txtUserInput
@@ -75,12 +76,23 @@
             lblProgramName.TabIndex = 3;
             lblProgramName.Text = "Echo Messenger";
             // 
+            // lblTextCount
+            // 
+            lblTextCount.AutoSize = true;
+            lblTextCount.Font = new Font("맑은 고딕", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            lblTextCount.Location = new Point(33, 577);
+            lblTextCount.Name = "lblTextCount";
+            lblTextCount.Size = new Size(156, 30);
+            lblTextCount.TabIndex = 4;
+            lblTextCount.Text = "현재 대화 : 0개";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(1098, 628);
+            Controls.Add(lblTextCount);
             Controls.Add(lblProgramName);
             Controls.Add(lstTextInput);
             Controls.Add(btrUpload);
@@ -97,5 +109,6 @@
         private Button btrUpload;
         private ListBox lstTextInput;
         private Label lblProgramName;
+        private Label lblTextCount;
     }
 }
