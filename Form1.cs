@@ -35,7 +35,9 @@ namespace Echo_Messenger
             {
                 lstTextInput.Items.Add($"[{time}] {UserInput}"); // lstTextInput 에 UserInput 텍스트를 입력
             }
-            txtUserInput.Text = ""; // txtUserInput 에 입력한 텍스트를 지워줌
+            
+            lstTextInput.TopIndex = lstTextInput.Items.Count - 1;// IstTextinput 에 입력한 텍스트가 많아질 때 스크롤이 자동으로 내려가도록 해줌
+            txtUserInput.Text = ""; // txtUserInput 에 입력한 텍스트를 지워줌              
 
             txtUserInput.Focus(); // txtUserInput 에 입력한 텍스트를 지운 후에도 txtUserInput 에 커서가 위치하도록 해줌
 
@@ -67,7 +69,7 @@ namespace Echo_Messenger
 
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {
-            if (lstTextInput.SelectedIndex != -1)
+            if (lstTextInput.Items.Count > 0)
             {
                 lstTextInput.Items.Clear();
                 lblTextCount.Text = ($"현재 대화 : {lstTextInput.Items.Count} 개"); // 초기화 후 lblTextCount 라는 레이블에 txtUserInput 에 입력한 텍스트의 개수를 표시해줌
