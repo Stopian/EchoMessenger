@@ -9,11 +9,23 @@
   > Label, TextBox, ListBox, Button
 - 화면 구성:
   > 중앙의 lstTextInput, lstTextInput 아래의 txtUserInput, txtUserInput 옆의 전송 버튼, 화면 상단의 lblProgramName
+    화면 왼쪽 아래의 lblTextCount, 상단의 선택 항목 삭제 버튼 ( btrDelete ) 및 전체 초기화 버튼 ( btrDeleteAll )
 - 사용한 기술과 구현한 기능:
   > Visual Studio를 이용하여 UI 디자인
   
   > string 클래스를 이용한 사용자 입력 데이터 처리
 
+  > ListBox 컨트롤을 이용한 메시지 표시 및 관리
+
+  > 입력값 검증을 통한 공백 입력 방지 및 글자 수 제한
+
+  > 타임스탬프 추가를 통한 메시지 입력 시간 표시
+
+  > 라벨을 통한 메시지 카운팅 기능 구현
+
+  > Trim을 이용한 불필요한 공백 문자열 제거
+
+  > 선택 항목 삭제 및 전체 초기화 기능 구현
   ## 실행 화면 (과제1)
 - 과제1 코드의 실행 스크린샷
 ![과제1스크린샷]<img width="1095" height="657" alt="image" src="https://github.com/user-attachments/assets/e64a652e-9be4-4c16-b21e-ca936d5904bc" />
