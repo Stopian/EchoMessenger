@@ -33,6 +33,8 @@
             lstTextInput = new ListBox();
             lblProgramName = new Label();
             lblTextCount = new Label();
+            btnDelete = new Button();
+            btnDeleteAll = new Button();
             SuspendLayout();
             // 
             // txtUserInput
@@ -86,12 +88,36 @@
             lblTextCount.TabIndex = 4;
             lblTextCount.Text = "현재 대화 : 0개";
             // 
+            // btnDelete
+            // 
+            btnDelete.Font = new Font("맑은 고딕", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            btnDelete.Location = new Point(556, 29);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(161, 60);
+            btnDelete.TabIndex = 5;
+            btnDelete.Text = "삭제";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnDeleteAll
+            // 
+            btnDeleteAll.Font = new Font("맑은 고딕", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            btnDeleteAll.Location = new Point(762, 29);
+            btnDeleteAll.Name = "btnDeleteAll";
+            btnDeleteAll.Size = new Size(207, 60);
+            btnDeleteAll.TabIndex = 6;
+            btnDeleteAll.Text = "전체 삭제";
+            btnDeleteAll.UseVisualStyleBackColor = true;
+            btnDeleteAll.Click += btnDeleteAll_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(1098, 628);
+            Controls.Add(btnDeleteAll);
+            Controls.Add(btnDelete);
             Controls.Add(lblTextCount);
             Controls.Add(lblProgramName);
             Controls.Add(lstTextInput);
@@ -110,5 +136,7 @@
         private ListBox lstTextInput;
         private Label lblProgramName;
         private Label lblTextCount;
+        private Button btnDelete;
+        private Button btnDeleteAll;
     }
 }
