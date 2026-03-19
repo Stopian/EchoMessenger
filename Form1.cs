@@ -28,7 +28,7 @@ namespace Echo_Messenger
             }
             else
             {
-                lstTextInput.Items.Add(UserInput); // lstTextInput 에 UserInput 텍스트를 입력
+                lstTextInput.Items.Add($"[{time}] {UserInput}"); // lstTextInput 에 UserInput 텍스트를 입력
             }
             txtUserInput.Text = ""; // txtUserInput 에 입력한 텍스트를 지워줌
 
