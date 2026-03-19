@@ -19,7 +19,14 @@ namespace Echo_Messenger
         {
 
             string UserInput = txtUserInput.Text; // txtUserInput 에 입력한 텍스트를 UserIntut 라는 변수에 저장해줌
-            lstTextInput.Items.Add(UserInput); // lstTextInput 에 UserInput 텍스트를 입력
+            if (string.IsNullOrEmpty(txtUserInput.Text))
+            {
+                return; // txtUserInput 에 입력한 텍스트가 없으면 재호출
+            }
+            else
+            {
+                lstTextInput.Items.Add(UserInput); // lstTextInput 에 UserInput 텍스트를 입력
+            }
             txtUserInput.Text = ""; // txtUserInput 에 입력한 텍스트를 지워줌
 
             txtUserInput.Focus(); // txtUserInput 에 입력한 텍스트를 지운 후에도 txtUserInput 에 커서가 위치하도록 해줌
